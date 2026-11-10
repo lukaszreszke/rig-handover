@@ -77,3 +77,19 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader: types + readNight | — | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+| 2 | Digest page `GET /digest/:night` | #1 | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+| 3 | Digest JSON `GET /api/digest/:night` | #1 | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+| 4 | Board link with counts | #1, #2 | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+| 5 | Route tests for 2a and 2b | #2, #3 | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+| 6 | Preview for review | #2, #3, #4 | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+| 7 | Clean up the preview marker | #6 | omp · deepseek-v4.1-flash · default | 2026-11-10 |
+
+The preview went to https://piotr175-20175.mikrus.cloud/digest-preview/ on 10 November and the
+lane marker was taken off it after the review (ADR 0003). Saved by `scripts/preview.mjs`, so the
+same page can be produced again with `LANE_MARKER` unset.
